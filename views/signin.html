@@ -95,8 +95,8 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#views.signin.account_response" title="views.signin.account_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">account_response</span></code></a>(request[, msg, success])</p></td>
-<td><p>Return a response page for account creation, either positive or negative</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#views.signin.bool_response" title="views.signin.bool_response"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bool_response</span></code></a>(request[, success, title, ...])</p></td>
+<td><p>Return a dynamic response page, either positive or negative</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#views.signin.delete_singined_user" title="views.signin.delete_singined_user"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_singined_user</span></code></a>(request[, ...])</p></td>
 <td><p>Delete the current logged in user</p></td>
@@ -131,15 +131,18 @@
 </tbody>
 </table>
 <dl class="py function">
-<dt class="sig sig-object py" id="views.signin.account_response">
-<span class="sig-prename descclassname"><span class="pre">views.signin.</span></span><span class="sig-name descname"><span class="pre">account_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">starlette.requests.Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/views/signin.html#account_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#views.signin.account_response" title="Permalink to this definition"></a></dt>
-<dd><p>Return a response page for account creation, either positive or negative</p>
+<dt class="sig sig-object py" id="views.signin.bool_response">
+<span class="sig-prename descclassname"><span class="pre">views.signin.</span></span><span class="sig-name descname"><span class="pre">bool_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">starlette.requests.Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">success</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Fehler'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buttontext</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Startseite'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/views/signin.html#bool_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#views.signin.bool_response" title="Permalink to this definition"></a></dt>
+<dd><p>Return a dynamic response page, either positive or negative</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>request</strong> (<em>Request</em>) – the http request</p></li>
-<li><p><strong>msg</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – the error msg. Defaults to “”.</p></li>
-<li><p><strong>success</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – the succes boolean. Defaults to “”.</p></li>
+<li><p><strong>success</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em><em>, </em><em>optional</em>) – the success boolean. Defaults to False.</p></li>
+<li><p><strong>title</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – the title text displayed over the checkmark. Defaults to “Fehler”.</p></li>
+<li><p><strong>msg</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – the message displayed under the text. Defaults to “”.</p></li>
+<li><p><strong>buttontext</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – text displayed inside the button. Defaults to “Startseite”.</p></li>
+<li><p><strong>url</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – href to which the link button redirects. Defaults to “/”.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -297,7 +300,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>redirect to /accresp/?success=…</p>
+<dd class="field-even"><p>redirect to /boolresp/?success=…</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>RedirectResponse</p>
